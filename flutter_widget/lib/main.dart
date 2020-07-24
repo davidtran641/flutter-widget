@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget/counter_demo.dart';
 import 'package:flutter_widget/gesture_demo.dart';
 import 'package:flutter_widget/widget_basic.dart';
 
@@ -53,6 +54,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => GestureDemo()));
+              },
+            ),
+
+            ListTile(
+              title: Text('Counter'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CounterDemo()));
               },
             ),
           ],
