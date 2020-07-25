@@ -32,6 +32,11 @@ class ShoppingList extends StatefulWidget {
 class _ShoppingListState extends State<ShoppingList> {
   Set<Product> _shoppingCart = Set<Product>();
 
+  @override
+  void initState() {
+    super.initState();
+  }
+
   void _handleCartChanged(Product product, bool inCart) {
     setState(() {
       if (!inCart)
