@@ -42,11 +42,7 @@ class LayoutDemo extends StatelessWidget {
               ],
             ),
           ),
-          Icon(
-            Icons.star,
-            color: Colors.redAccent,
-          ),
-          Text('41'),
+          FavoriteWidget(),
         ],
       ),
     );
@@ -100,6 +96,45 @@ class LayoutDemo extends StatelessWidget {
       width: 600,
       height: 240,
       fit: BoxFit.cover,
+    );
+  }
+}
+
+class FavoriteWidget extends StatefulWidget {
+  @override
+  _FavoriteWidgetState createState() => _FavoriteWidgetState();
+}
+
+class _FavoriteWidgetState extends State<FavoriteWidget> {
+  bool _isFavorite = true;
+  int _favoriteCount = 41;
+
+  void _handleFavoriteButton() {
+    setState(() {
+      if (_isFavorite) {
+        _isFavorite = false;
+        _favoriteCount -= 1;
+      } else {
+        _isFavorite = true;
+        _favoriteCount += 1;
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        IconButton(
+          icon: _isFavorite ? Icon(Icons.star) : Icon(Icons.star_border),
+          color: Colors.redAccent,
+          onPressed: _handleFavoriteButton,
+        ),
+        SizedBox(
+          width: 18,
+          child: Text('$_favoriteCount'),
+        )
+      ],
     );
   }
 }
