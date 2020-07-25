@@ -18,7 +18,7 @@ class _StateManageDemoState extends State<StateManageDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Tapbox(
+        child: TapBox(
           isActive: isActive,
           onChanged: _handleTap,
         ),
@@ -27,8 +27,8 @@ class _StateManageDemoState extends State<StateManageDemo> {
   }
 }
 
-class Tapbox extends StatelessWidget {
-  Tapbox({Key key, this.isActive: false, @required this.onChanged})
+class TapBox extends StatelessWidget {
+  TapBox({Key key, this.isActive: false, @required this.onChanged})
       : super(key: key);
 
   final bool isActive;
