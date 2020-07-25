@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget/counter_demo.dart';
 import 'package:flutter_widget/gesture_demo.dart';
+import 'package:flutter_widget/shopping_demo.dart';
 import 'package:flutter_widget/widget_basic.dart';
 
 import 'hello_world.dart';
@@ -62,6 +63,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => CounterDemo()));
+              },
+            ),
+
+            ListTile(
+              title: Text('Shopping List'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ShoppingDemo()));
               },
             ),
           ],
