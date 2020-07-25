@@ -3,6 +3,7 @@ import 'package:flutter_widget/counter_demo.dart';
 import 'package:flutter_widget/gesture_demo.dart';
 import 'package:flutter_widget/layout_demo.dart';
 import 'package:flutter_widget/shopping_demo.dart';
+import 'package:flutter_widget/state_manage_demo.dart';
 import 'package:flutter_widget/widget_basic.dart';
 
 import 'hello_world.dart';
@@ -80,6 +81,13 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => LayoutDemo()));
+              },
+            ),
+            ListTile(
+              title: Text('State demo'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => StateManageDemo()));
               },
             ),
           ],
