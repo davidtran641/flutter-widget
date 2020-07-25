@@ -34,7 +34,14 @@ class _ShoppingListState extends State<ShoppingList> {
 
   @override
   void initState() {
+    print("_ShoppingListState initState");
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    print("_ShoppingListState disposed");
+    super.dispose();
   }
 
   void _handleCartChanged(Product product, bool inCart) {
@@ -52,6 +59,7 @@ class _ShoppingListState extends State<ShoppingList> {
 
   @override
   Widget build(BuildContext context) {
+    print("_ShoppingListState build");
     return Scaffold(
       appBar: AppBar(
         title: Text('Shopping List'),
