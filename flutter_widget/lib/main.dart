@@ -6,6 +6,7 @@ import 'package:flutter_widget/shopping_demo.dart';
 import 'package:flutter_widget/state_manage_demo.dart';
 import 'package:flutter_widget/widget_basic.dart';
 
+import 'animate_transition.dart';
 import 'hello_world.dart';
 
 void main() {
@@ -88,6 +89,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => StateManageDemo()));
+              },
+            ),
+
+            ListTile(
+              title: Text('Transition Animation'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => TransitionDemo()));
               },
             ),
           ],
