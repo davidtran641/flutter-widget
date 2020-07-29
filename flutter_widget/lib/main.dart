@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget/AnimatedContainerDemo.dart';
+import 'package:flutter_widget/animated_container_demo.dart';
 import 'package:flutter_widget/counter_demo.dart';
 import 'package:flutter_widget/gesture_demo.dart';
 import 'package:flutter_widget/layout_demo.dart';
@@ -8,6 +8,7 @@ import 'package:flutter_widget/shopping_demo.dart';
 import 'package:flutter_widget/state_manage_demo.dart';
 import 'package:flutter_widget/widget_basic.dart';
 
+import 'animate_opacity_demo.dart';
 import 'animate_transition.dart';
 import 'hello_world.dart';
 
@@ -115,6 +116,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => AnimatedContainerDemo()));
+              },
+            ),
+
+            ListTile(
+              title: Text('Animated Opacity'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AnimateOpacityDemo()));
               },
             ),
           ],
