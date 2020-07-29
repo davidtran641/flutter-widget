@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget/AnimatedContainerDemo.dart';
 import 'package:flutter_widget/counter_demo.dart';
 import 'package:flutter_widget/gesture_demo.dart';
 import 'package:flutter_widget/layout_demo.dart';
@@ -106,6 +107,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => PhysicsCardDragDemo()));
+              },
+            ),
+
+            ListTile(
+              title: Text('Animated Container'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AnimatedContainerDemo()));
               },
             ),
           ],
