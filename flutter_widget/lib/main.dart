@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget/animated_container_demo.dart';
 import 'package:flutter_widget/counter_demo.dart';
+import 'package:flutter_widget/custom_scroll_view_demo.dart';
 import 'package:flutter_widget/gesture_demo.dart';
 import 'package:flutter_widget/layout_demo.dart';
 import 'package:flutter_widget/physics_card_demo.dart';
@@ -124,6 +125,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => AnimateOpacityDemo()));
+              },
+            ),
+
+            ListTile(
+              title: Text('CustomScrollView demo'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CustomScrollViewDemo()));
               },
             ),
           ],
