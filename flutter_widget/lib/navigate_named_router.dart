@@ -25,7 +25,7 @@ class FirstScreen extends StatelessWidget {
         child: RaisedButton(
           child: Text('Launch screen'),
           onPressed: () {
-            Navigator.of(context).pushNamed('/second');
+            Navigator.of(context).pushNamed('/second', arguments: SecondScreenArgument('Second', 'Hi john'));
           },
         ),
       ),
@@ -33,19 +33,27 @@ class FirstScreen extends StatelessWidget {
   }
 }
 
+class SecondScreenArgument {
+  final String title;
+  final String message;
+  SecondScreenArgument(this.title, this.message);
+}
+
 class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final SecondScreenArgument args = ModalRoute.of(context).settings.arguments;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Screen"),
+        title: Text(args.title),
       ),
       body: Center(
         child: RaisedButton(
           onPressed: () {
             Navigator.of(context).pop();
           },
-          child: Text('Go back!'),
+          child: Text(args.message),
         ),
       ),
     );
