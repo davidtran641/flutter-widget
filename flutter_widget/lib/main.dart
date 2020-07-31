@@ -5,6 +5,7 @@ import 'package:flutter_widget/custom_scroll_view_demo.dart';
 import 'package:flutter_widget/gesture_demo.dart';
 import 'package:flutter_widget/hero_animation_demo.dart';
 import 'package:flutter_widget/layout_demo.dart';
+import 'package:flutter_widget/navigate_named_router.dart';
 import 'package:flutter_widget/physics_card_demo.dart';
 import 'package:flutter_widget/shopping_demo.dart';
 import 'package:flutter_widget/state_manage_demo.dart';
@@ -142,6 +143,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => HeroAnimationDemo()));
+              },
+            ),
+
+            ListTile(
+              title: Text('Named Route demo'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NamedRouteDemo()));
               },
             ),
           ],
