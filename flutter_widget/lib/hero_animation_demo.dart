@@ -15,7 +15,10 @@ class HeroAnimationDemo extends StatelessWidget {
         },
         child: Hero(
           tag: 'mainImage',
-          child: Image.network('https://picsum.photos/250?image=9'),
+          child: Container(
+            height: 100,
+            child: Image.network('https://picsum.photos/250?image=9'),
+          ),
         )
       ),
     );
