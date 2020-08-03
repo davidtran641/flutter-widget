@@ -7,6 +7,7 @@ import 'package:flutter_widget/hero_animation_demo.dart';
 import 'package:flutter_widget/layout_demo.dart';
 import 'package:flutter_widget/navigate_named_router.dart';
 import 'package:flutter_widget/navigator_return_data.dart';
+import 'package:flutter_widget/network_demo.dart';
 import 'package:flutter_widget/physics_card_demo.dart';
 import 'package:flutter_widget/shopping_demo.dart';
 import 'package:flutter_widget/state_manage_demo.dart';
@@ -160,6 +161,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => NavigatorReturnDataDemo()));
+              },
+            ),
+
+            ListTile(
+              title: Text('Network demo'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NetworkDemo()));
               },
             ),
           ],
