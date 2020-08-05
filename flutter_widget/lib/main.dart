@@ -9,6 +9,7 @@ import 'package:flutter_widget/navigate_named_router.dart';
 import 'package:flutter_widget/navigator_return_data.dart';
 import 'package:flutter_widget/network_background.dart';
 import 'package:flutter_widget/network_demo.dart';
+import 'package:flutter_widget/network_websocket.dart';
 import 'package:flutter_widget/physics_card_demo.dart';
 import 'package:flutter_widget/shopping_demo.dart';
 import 'package:flutter_widget/state_manage_demo.dart';
@@ -178,6 +179,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => NetworkBackgroundDemo()));
+              },
+            ),
+
+            ListTile(
+              title: Text('Websocket demo'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => WebSocketDemo()));
               },
             ),
           ],
