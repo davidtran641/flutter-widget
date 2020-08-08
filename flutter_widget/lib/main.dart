@@ -12,6 +12,7 @@ import 'package:flutter_widget/network_demo.dart';
 import 'package:flutter_widget/network_websocket.dart';
 import 'package:flutter_widget/physics_card_demo.dart';
 import 'package:flutter_widget/shopping_demo.dart';
+import 'package:flutter_widget/sqlite_demo.dart';
 import 'package:flutter_widget/state_manage_demo.dart';
 import 'package:flutter_widget/widget_basic.dart';
 
@@ -187,6 +188,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => WebSocketDemo()));
+              },
+            ),
+
+            ListTile(
+              title: Text('Sqlite demo'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SqliteDemo()));
               },
             ),
           ],

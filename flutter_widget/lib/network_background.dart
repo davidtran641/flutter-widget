@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -54,7 +55,17 @@ class PhotoList extends StatelessWidget {
         itemCount: photos.length,
         itemBuilder: (context, index) {
           final thumbnailUrl = photos[index].thumbnailUrl;
-          return FadeInImage.memoryNetwork(placeholder: kTransparentImage, image: thumbnailUrl);
+//          return FadeInImage.memoryNetwork(placeholder: kTransparentImage, image: thumbnailUrl);
+          return CachedNetworkImage(imageUrl: thumbnailUrl,
+            placeholder: (context, url) => Center(
+              child: Container(
+                width: 50,
+                height: 50,
+                child: CircularProgressIndicator(),
+              ),
+            ),
+            placeholderFadeInDuration: Duration(milliseconds: 300),
+          );
         });
   }
 }
